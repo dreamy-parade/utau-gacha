@@ -178,11 +178,12 @@
     }
 
     function createShareText(video, name) {
-      const title = "UTAU音源ランダム召喚";
+      const hashtag = "#UTAU音源ランダム召喚";
       const videoTitle = video.title;
       const url = video.url;
+      const page = "https://dreamy-parade.github.io/utau-gacha/"
 
-      return `${title}\n${videoTitle}\n${url}`;
+      return `${videoTitle}\n${url}\n\n${hashtag}\n${page}`;
     }
 
     function render(video, name) {

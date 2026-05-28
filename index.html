@@ -152,19 +152,20 @@
     let lastVideoId = null;
     
     function pickVideo() {
-      if (video.length == 0) return null;
-      
+      if (videos.length === 0) return null;
+    
       let video;
-
+    
       do {
         const index = Math.floor(Math.random() * videos.length);
         video = videos[index];
       } while (
-        videos.length > 1 && video.id === lastVideoId
+        videos.length > 1 &&
+        video.id === lastVideoId
       );
-
+    
       lastVideoId = video.id;
-      
+    
       return video;
     }
 

@@ -80,14 +80,19 @@
 
     .thumbnail-wrapper {
       position: relative;
-      display: inline-block;
+      display: flex;
+      align-items: center;
       width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 12px;
     }
 
     .thumbnail-wrapper img {
-      border-radius: 12px;
       display: block;
       width: 100%;
+      backface-visibility: hidden;
+      transform: translateZ(0) scale(1.01);
     }
 
     .video-title {

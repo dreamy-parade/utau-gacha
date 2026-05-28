@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="最新UTAU音源ランダム召喚" />
+  <meta property="og:title" content="最新UTAUランダム召喚" />
   <meta property="og:description" content="あなたに合うUTAU音源をランダムに表示します" />
   <meta property="og:image" content="/ogp.png" />
-  <title>最新UTAU音源ランダム召喚</title>
+  <title>最新UTAUランダム召喚</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&display=swap" rel="stylesheet">
@@ -115,16 +115,11 @@
 <body>
   <main class="container">
 
-    <h1>最新UTAU音源ランダム召喚</h1>
+    <h1>最新UTAUランダム召喚</h1>
 
     <p>
       最新100件の「UTAU音源配布所リンク」動画から、あなたに合う音源をランダムに表示します。
     </p>
-
-    <label>
-      名前（任意）
-      <input type="text" id="nameInput">
-    </label>
 
     <button id="summonButton" class="primary">
       召喚する
@@ -154,14 +149,27 @@
       return Math.abs(hash);
     }
 
-    function pickVideo(name) {
-      const seed = name + Date.now();
-      const index = hashString(seed) % videos.length;
-      return videos[index];
+    let lastVideoId = null;
+    
+    function pickVideo() {
+      if (video.length == 0) return null;
+      
+      let video;
+
+      do {
+        const index = Math.floor(Math.random() * videos.length);
+        video = videos[index];
+      } while (
+        videos.length > 1 && video.id === lastVideoId
+      );
+
+      lastVideoId = video.id;
+      
+      return video;
     }
 
-    function createShareText(video, name) {
-      const hashtag = "#最新UTAU音源ランダム召喚";
+    function createShareText(video) {
+      const hashtag = "#最新UTAUランダム召喚";
       const videoTitle = video.title;
       const url = video.url;
       const page = "https://dreamy-parade.github.io/utau-gacha/"
@@ -169,14 +177,14 @@
       return `${videoTitle}\n${url}\n\n${hashtag}\n${page}`;
     }
 
-    function render(video, name) {
+    function render(video) {
       currentVideo = video;
 
       const result = document.getElementById("result");
       const date = new Date(video.startTime).toLocaleDateString("ja-JP");
       const videoId = video.id;
 
-      const shareText = encodeURIComponent(createShareText(video, name));
+      const shareText = encodeURIComponent(createShareText(video));
       const shareUrl = `https://twitter.com/intent/tweet?text=${shareText}`;
 
       result.style.display = "block";
@@ -197,14 +205,14 @@
 
         <p class="meta">
           投稿日: ${date}<br>
-          投稿者ID: <a href="https://www.nicovideo.jp/user/${video.userId}" target="_blank">${video.userId}</a>
+          投稿者ID: <a href="https://www.nicovideo.jp/user/${video.userId}" target="_blank" rel="noopener noreferrer">${video.userId}</a>
         </p>
 
-        <a href="${video.url}" target="_blank" role="button" class="primary">
+        <a href="${video.url}" target="_blank" rel="noopener noreferrer" role="button" class="primary">
           ニコニコで見る
         </a>
 
-        <a href="${shareUrl}" target="_blank" role="button" class="secondary share-button">
+        <a href="${shareUrl}" target="_blank" rel="noopener noreferrer" role="button" class="secondary share-button">
           Xで共有する
         </a>
       `;
@@ -232,14 +240,12 @@
       const result = document.getElementById("result");
       result.style.display = "none";
 
-      const name = document.getElementById("nameInput").value;
-
       document.getElementById("status").textContent =
         "UTAU音源を探しています…";
 
       setTimeout(() => {
-        const video = pickVideo(name);
-        render(video, name);
+        const video = pickVideo();
+        render(video);
         document.getElementById("status").textContent = "";
       }, 400);
     }

@@ -90,28 +90,6 @@
       width: 100%;
     }
 
-    .play-button {
-      position: absolute;
-      right: 12px;
-      bottom: 12px;
-      width: 44px;
-      height: 44px;
-      background: var(--primary);
-      color: white;
-      border-radius: 999px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .play-button:hover {
-      background: var(--primary-hover);
-    }
-
     .video-title {
       font-size: 1.2rem;
       font-weight: bold;
@@ -201,10 +179,12 @@
       result.innerHTML = `
         <div id="mediaArea">
           <div class="thumbnail-wrapper" id="thumbnailArea">
-            <img src="${video.thumbnail}.L" alt="thumbnail">
-            <button class="play-button" onclick="playVideo('${videoId}')" aria-label="再生">
-              ▶︎
-            </button>
+            <img
+              src="${video.thumbnail}.L"
+              alt="thumbnail"
+              style="cursor: pointer;"
+              onclick="playVideo('${videoId}')"
+            >
           </div>
         </div>
         

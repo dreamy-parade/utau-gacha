@@ -1,8 +1,267 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-  <head>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="UTAU音源ランダム召喚" />
+  <meta property="og:description" content="あなたに合うUTAU音源をランダムに表示します" />
+  <meta property="og:image" content="/ogp.png" />
+  <title>UTAU音源ランダム召喚</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+  <style>
+    :root {
+      --primary: #8b5cf6;
+      --primary-hover: #7c3aed;
+      --primary-focus: rgba(139, 92, 246, 0.25);
+    }
+
+    * {
+      font-family: "LINE Seed JP", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
     
-  </body>
+    h1 {
+      font-family: "LINE Seed JP", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .primary {
+      border-color: var(--primary);
+      background-color: var(--primary);
+      color: white;
+    }
+    .primary:hover {
+      background-color: var(--primary-hover);
+    }
+    .primary:focus {
+      box-shadow: 0 0 0 4px var(--primary-focus);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .result-card {
+      margin-top: 24px;
+      display: none;
+      border-radius: 16px;
+    }
+
+    #status {
+      margin-top: 16px;
+    }
+
+    .mediaArea {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .video-embed {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .video-embed iframe,
+    .video-embed script {
+      width: 100%;
+      height: 100%;
+    }
+
+    .thumbnail-wrapper {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .thumbnail-wrapper img {
+      border-radius: 12px;
+      display: block;
+      width: 100%;
+    }
+
+    .play-button {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      width: 44px;
+      height: 44px;
+      background: var(--primary);
+      color: white;
+      border-radius: 999px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .play-button:hover {
+      background: var(--primary-hover);
+    }
+
+    .video-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
+    .meta {
+      color: var(--muted-color);
+      font-size: 0.9rem;
+    }
+
+    .share-button {
+      margin-top: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <h1>UTAU音源ランダム召喚</h1>
+
+    <p>
+      最新100件の「UTAU音源配布所リンク」動画から、あなたに合う音源をランダムに表示します。
+    </p>
+
+    <label>
+      名前（任意）
+      <input type="text" id="nameInput">
+    </label>
+
+    <button id="summonButton" class="primary">
+      召喚する
+    </button>
+
+    <div id="status"></div>
+
+    <article id="result" class="result-card"></article>
+
+  </main>
+
+  <script>
+    let videos = [];
+    let currentVideo = null;
+
+    async function loadVideos() {
+      const res = await fetch("./videos.json");
+      videos = await res.json();
+    }
+
+    function hashString(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = ((hash << 5) - hash) + str.charCodeAt(i);
+        hash |= 0;
+      }
+      return Math.abs(hash);
+    }
+
+    function pickVideo(name) {
+      const seed = name + Date.now();
+      const index = hashString(seed) % videos.length;
+      return videos[index];
+    }
+
+    function createShareText(video, name) {
+      const title = "UTAU音源ランダム召喚";
+      const videoTitle = video.title;
+      const url = video.url;
+
+      return `${title}\n${videoTitle}\n${url}`;
+    }
+
+    function render(video, name) {
+      currentVideo = video;
+
+      const result = document.getElementById("result");
+      const date = new Date(video.startTime).toLocaleDateString("ja-JP");
+      const videoId = video.id;
+
+      const shareText = encodeURIComponent(createShareText(video, name));
+      const shareUrl = `https://twitter.com/intent/tweet?text=${shareText}`;
+
+      result.style.display = "block";
+
+      result.innerHTML = `
+        <div id="mediaArea">
+          <div class="thumbnail-wrapper" id="thumbnailArea">
+            <img src="${video.thumbnail}.L" alt="thumbnail">
+            <button class="play-button" onclick="playVideo('${videoId}')" aria-label="再生">
+              ▶︎
+            </button>
+          </div>
+        </div>
+        
+        <h2 class="video-title">${video.title}</h2>
+
+        <p class="meta">
+          投稿日: ${date}<br>
+          投稿者ID: ${video.userId}
+        </p>
+
+        <a href="${video.url}" target="_blank" role="button" class="primary">
+          ニコニコで見る
+        </a>
+
+        <a href="${shareUrl}" target="_blank" role="button" class="secondary share-button">
+          Xで共有する
+        </a>
+      `;
+    }
+
+    function playVideo(videoId) {
+      const area = document.getElementById("mediaArea");
+
+      area.innerHTML = `
+        <div class="video-embed">
+          <iframe
+            src="https://embed.nicovideo.jp/watch/${videoId}"
+            width="100%"
+            height="360"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      `;
+    }
+
+    function summon() {
+      if (!videos.length) return;
+
+      const result = document.getElementById("result");
+      result.style.display = "none";
+
+      const name = document.getElementById("nameInput").value;
+
+      document.getElementById("status").textContent =
+        "適合音源を検索しています…";
+
+      setTimeout(() => {
+        const video = pickVideo(name);
+        render(video, name);
+        document.getElementById("status").textContent = "";
+      }, 400);
+    }
+
+    document.getElementById("summonButton")
+      .addEventListener("click", summon);
+
+    loadVideos();
+  </script>
+</body>
 </html>

@@ -211,7 +211,7 @@
 
         <p class="meta">
           投稿日: ${date}<br>
-          投稿者ID: ${video.userId}
+          投稿者ID: <a href="https://www.nicovideo.jp/user/${video.userId}" target="_blank">${video.userId}</a>
         </p>
 
         <a href="${video.url}" target="_blank" role="button" class="primary">
@@ -249,7 +249,7 @@
       const name = document.getElementById("nameInput").value;
 
       document.getElementById("status").textContent =
-        "適合音源を検索しています…";
+        "UTAU音源を探しています…";
 
       setTimeout(() => {
         const video = pickVideo(name);

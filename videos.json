@@ -1,11 +1,43 @@
 [
   {
+    "id": "sm46600098",
+    "title": "【UTAU音源配布】メーベル【㐂乃宮陽介】",
+    "url": "https://www.nicovideo.jp/watch/sm46600098",
+    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46600098/46600098.11456959",
+    "startTime": "2026-07-28T21:00:00+09:00",
+    "userId": 133090388
+  },
+  {
+    "id": "sm46586806",
+    "title": "【UTAU音源配布・カバー】ダストトレイル【音花桐花・ジュン】",
+    "url": "https://www.nicovideo.jp/watch/sm46586806",
+    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46586806/46586806.41724615",
+    "startTime": "2026-07-28T21:00:00+09:00",
+    "userId": 67433896
+  },
+  {
+    "id": "sm46599181",
+    "title": "【UTAU音源配布】抜錨【アリア・マスカレイド】",
+    "url": "https://www.nicovideo.jp/watch/sm46599181",
+    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46599181/46599181.10049798",
+    "startTime": "2026-07-28T16:04:16+09:00",
+    "userId": 50986617
+  },
+  {
     "id": "sm46595470",
     "title": "【UTAUカバー】TXTXXI/鮫山澪【UTAU音源配布】",
     "url": "https://www.nicovideo.jp/watch/sm46595470",
     "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46595470/46595470.34547880",
     "startTime": "2026-07-27T11:02:26+09:00",
     "userId": 136302503
+  },
+  {
+    "id": "sm46595065",
+    "title": "【UTAU音源配布】【澪音コン-残余蓄音】黄金数",
+    "url": "https://www.nicovideo.jp/watch/sm46595065",
+    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46595065/46595065.6392814",
+    "startTime": "2026-07-27T06:00:00+09:00",
+    "userId": 144960944
   },
   {
     "id": "sm46592808",
@@ -766,37 +798,5 @@
     "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46497919/46497919.30353011",
     "startTime": "2026-06-30T22:55:27+09:00",
     "userId": 134017192
-  },
-  {
-    "id": "sm46497787",
-    "title": "【UTAUカバー＋音源配布】熱異常【冥電キャタ2】",
-    "url": "https://www.nicovideo.jp/watch/sm46497787",
-    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46497787/46497787.34064244",
-    "startTime": "2026-06-30T22:38:59+09:00",
-    "userId": 142020539
-  },
-  {
-    "id": "sm46497742",
-    "title": "【UTAU音源配布】ハーメルンの悪夢【ポム・コクリコット・ナーサリーライム】",
-    "url": "https://www.nicovideo.jp/watch/sm46497742",
-    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46497742/46497742.65531271",
-    "startTime": "2026-06-30T22:09:25+09:00",
-    "userId": 27502960
-  },
-  {
-    "id": "sm46493598",
-    "title": "【UTAU音源配布】雨ニ酔ウ【降谷梅香】",
-    "url": "https://www.nicovideo.jp/watch/sm46493598",
-    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46493598/46493598.24982326",
-    "startTime": "2026-06-30T21:00:25+09:00",
-    "userId": 130445924
-  },
-  {
-    "id": "sm46494253",
-    "title": "空澄みの鵯と / 繊月緋色【UTAUカバー】+LIMITED VB",
-    "url": "https://www.nicovideo.jp/watch/sm46494253",
-    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46494253/46494253.35611906",
-    "startTime": "2026-06-30T21:00:00+09:00",
-    "userId": 39550352
   }
 ]

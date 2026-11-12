@@ -1,5 +1,29 @@
 [
   {
+    "id": "sm47034400",
+    "title": "【UTAU音源配布】ノウナイディスコ【もちは餅屋VCV】",
+    "url": "https://www.nicovideo.jp/watch/sm47034400",
+    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/47034400/47034400.21966378",
+    "startTime": "2026-11-11T21:56:23+09:00",
+    "userId": 126749882
+  },
+  {
+    "id": "sm47034097",
+    "title": "【UTAU音源配布】空に免じて【玖婥えれん-Blue-】",
+    "url": "https://www.nicovideo.jp/watch/sm47034097",
+    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/47034097/47034097.66965103",
+    "startTime": "2026-11-11T21:00:00+09:00",
+    "userId": 115788316
+  },
+  {
+    "id": "sm47033779",
+    "title": "【UTAU音源配布】テレキャスタービーボーイ(long ver.)【白日ヒナタ_ 強_連続音】",
+    "url": "https://www.nicovideo.jp/watch/sm47033779",
+    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/47033779/47033779.52213020",
+    "startTime": "2026-11-11T19:16:54+09:00",
+    "userId": 130748848
+  },
+  {
     "id": "sm47031763",
     "title": "【UTAUカバー＋無生物音源配布】ひつじがいっぴき【OUプラグイン配布】",
     "url": "https://www.nicovideo.jp/watch/sm47031763",
@@ -38,6 +62,14 @@
     "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/47031523/47031523.58859339",
     "startTime": "2026-11-11T00:38:25+09:00",
     "userId": 84852023
+  },
+  {
+    "id": "sm47031435",
+    "title": "【UTAU音源配布】ポストシェルター【もちは餅屋VCV】",
+    "url": "https://www.nicovideo.jp/watch/sm47031435",
+    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/47031435/47031435.76104420",
+    "startTime": "2026-11-11T00:14:11+09:00",
+    "userId": 126749882
   },
   {
     "id": "sm47031138",
@@ -766,37 +798,5 @@
     "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46941411/46941411.24412832",
     "startTime": "2026-10-18T23:15:53+09:00",
     "userId": 90322040
-  },
-  {
-    "id": "sm46941099",
-    "title": "【UTAU音源配布】8bitボカロメドレー第4章【彼此ドコ・彼此ソノ】",
-    "url": "https://www.nicovideo.jp/watch/sm46941099",
-    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46941099/46941099.84775965",
-    "startTime": "2026-10-18T21:59:24+09:00",
-    "userId": 128516497
-  },
-  {
-    "id": "sm46940917",
-    "title": "【UST&amp;音源配布】ぼく側に堕ちた天使【呑音なの】",
-    "url": "https://www.nicovideo.jp/watch/sm46940917",
-    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46940917/46940917.76376521",
-    "startTime": "2026-10-18T21:21:48+09:00",
-    "userId": 142645982
-  },
-  {
-    "id": "sm46940815",
-    "title": "【UTAU】実の父と歌ってみた【ねぇねぇねぇ。】【音源配布あり】",
-    "url": "https://www.nicovideo.jp/watch/sm46940815",
-    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46940815/46940815.5657324",
-    "startTime": "2026-10-18T20:57:24+09:00",
-    "userId": 142645982
-  },
-  {
-    "id": "sm46937485",
-    "title": "【UTAUカバー】アディオス【アストレイ・VOX音源配布】",
-    "url": "https://www.nicovideo.jp/watch/sm46937485",
-    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46937485/46937485.92298535",
-    "startTime": "2026-10-18T20:09:21+09:00",
-    "userId": 139130140
   }
 ]

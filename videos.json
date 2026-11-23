@@ -1,5 +1,37 @@
 [
   {
+    "id": "sm47077976",
+    "title": "【UTAU音源配布】猿芝居",
+    "url": "https://www.nicovideo.jp/watch/sm47077976",
+    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/47077976/47077976.81029764",
+    "startTime": "2026-11-23T03:22:59+09:00",
+    "userId": 140786608
+  },
+  {
+    "id": "sm47075491",
+    "title": "【UTAUカバー・音源配布】ルマ/かいりきベア【トルト-CV-】",
+    "url": "https://www.nicovideo.jp/watch/sm47075491",
+    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/47075491/47075491.18119114",
+    "startTime": "2026-11-22T17:29:45+09:00",
+    "userId": 132007984
+  },
+  {
+    "id": "sm47075622",
+    "title": "【夜.013】暗い夜道はすきですか【UTAU音源更新】",
+    "url": "https://www.nicovideo.jp/watch/sm47075622",
+    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/47075622/47075622.10955553",
+    "startTime": "2026-11-22T17:29:20+09:00",
+    "userId": 69651991
+  },
+  {
+    "id": "sm47074608",
+    "title": "【翊ソダツ-UTAU音源配布】ヤンキーボーイ・ヤンキーガール【UTAUカバー】",
+    "url": "https://www.nicovideo.jp/watch/sm47074608",
+    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/47074608/47074608.91113405",
+    "startTime": "2026-11-22T12:49:53+09:00",
+    "userId": 127828365
+  },
+  {
     "id": "sm47073636",
     "title": "【UTAU音源配布】Kai Singthesizer - ライアーダンス / Liar Dance【OpenUtauカバー】",
     "url": "https://www.nicovideo.jp/watch/sm47073636",
@@ -150,14 +182,6 @@
     "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/47049146/47049146.76723482",
     "startTime": "2026-11-15T21:58:01+09:00",
     "userId": 130627764
-  },
-  {
-    "id": "sm47048687",
-    "title": "【翊ソダツ】Q / 椎名もた【UTAUカバー】",
-    "url": "https://www.nicovideo.jp/watch/sm47048687",
-    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/47048687/47048687.2286778",
-    "startTime": "2026-11-15T16:18:23+09:00",
-    "userId": 127828365
   },
   {
     "id": "sm47048612",
@@ -774,29 +798,5 @@
     "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46969997/46969997.7420210",
     "startTime": "2026-10-27T20:00:00+09:00",
     "userId": 123839131
-  },
-  {
-    "id": "sm46970798",
-    "title": "【 カロガド(E) C+V ENG DL】 Apple 【UTAUカバー】",
-    "url": "https://www.nicovideo.jp/watch/sm46970798",
-    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46970798/46970798.73718502",
-    "startTime": "2026-10-27T06:00:20+09:00",
-    "userId": 145518731
-  },
-  {
-    "id": "sm46970491",
-    "title": "【UTAU】カロカドEさん用の辞書ファイルを配布【ごり押し変換プラグイン】",
-    "url": "https://www.nicovideo.jp/watch/sm46970491",
-    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46970491/46970491.20162912",
-    "startTime": "2026-10-27T01:38:49+09:00",
-    "userId": 9144803
-  },
-  {
-    "id": "sm46968098",
-    "title": "【UTAU音源配布】春歌秋月まとめ【UTAUカバー】",
-    "url": "https://www.nicovideo.jp/watch/sm46968098",
-    "thumbnail": "https://nicovideo.cdn.nimg.jp/thumbnails/46968098/46968098.73596966",
-    "startTime": "2026-10-26T20:00:00+09:00",
-    "userId": 9185854
   }
 ]
